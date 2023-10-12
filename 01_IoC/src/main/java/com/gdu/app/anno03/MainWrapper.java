@@ -1,4 +1,6 @@
-package com.gdu.app.anno02;
+package com.gdu.app.anno03;
+
+import java.util.Map;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.AbstractApplicationContext;
@@ -11,10 +13,18 @@ public class MainWrapper {
     AbstractApplicationContext ctx = new AnnotationConfigApplicationContext(AppConfig.class);
     
     // bean 가져오기
-    Board board = ctx.getBean("board", Board.class);
+    Student student = ctx.getBean("student", Student.class);
     
     // 확인
-    System.out.println(board.getTitle() + ", " + board.getEditor());
+    for(String subject : student.getSubjects()) {
+      System.out.println(subject);
+    }
+    for(String contact : student.getContacts()) {
+      System.out.println(contact);
+    }
+    for(Map.Entry<String, String> entry : student.getFriends().entrySet()) {
+      System.out.println(entry.getKey() + ":" + entry.getValue());
+    }
     
     // ctx 닫기
     ctx.close();
