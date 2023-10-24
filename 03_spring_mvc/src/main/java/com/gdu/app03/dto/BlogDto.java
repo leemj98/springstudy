@@ -1,9 +1,7 @@
 package com.gdu.app03.dto;
 
-import lombok.Data;
-
 import lombok.AllArgsConstructor;
-
+import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @NoArgsConstructor

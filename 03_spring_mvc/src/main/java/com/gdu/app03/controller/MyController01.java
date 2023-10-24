@@ -19,6 +19,8 @@ public class MyController01 {
    * 3. 매개변수
    *  1) HttpServletRequest를 선언해서 사용할 수 있다.
    *  2) HttpServletResponse를 선언해서 사용할 수 있다.
+   *  3) Model을 선언해서 forward할 정보를 저장할 수 있다.
+   *  4) HttpSession을 선언해서 사용할 수 있다.
    * 4. 요청(@RequestMapping)
    *  1) 메소드 : GET, POST
    *  2) URL    : 요청 주소
@@ -30,7 +32,7 @@ public class MyController01 {
   public String welcome() {
     // ViewResolver의 prefix : /WEB-INF/views/
     // ViewResolver의 suffix : .jsp
-    return "index";
+    return "index";  //        /WEB-INF/views/index.jsp
   }
   
   @RequestMapping(value="/board/list.do", method=RequestMethod.GET)

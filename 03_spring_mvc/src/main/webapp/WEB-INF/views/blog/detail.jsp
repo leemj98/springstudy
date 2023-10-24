@@ -9,7 +9,7 @@
 <body>
   ${blogNo}
   <br>
-  ${requestScope.blogNo} <!-- 리퀘스트에 저장된 blogNo, ${blogNo}랑 같음 -->
+  ${requestScope.blogNo}
   <br>
   ${blogDto.blogNo}
   <br>
